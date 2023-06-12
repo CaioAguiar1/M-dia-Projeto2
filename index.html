@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passei!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+        <!--img logo e titulo-->
+        <header>
+            <img src="./images/logo.png" alt="diploma">
+            <h1>Calculadora de médias</h1>
+        </header>
+        <form id="form-atividade"> <!--Começo do js-->
+            <!--Adicionar nota-->
+            <input type="text" id="nome-atividade" required placeholder="Nome da atividade">
+            <input type="number" id="nota-atividade" required placeholder="Nota da atividade" min="0" max="10"> <!--aceita numeros de 0 a 10 apenas-->
+            <button type="submit">Adicionar +</button>
+        </form>
+
+        <!--Tabela ver notas-->
+        <table cellspacing="0"> <!--Ajuste no css, para tirar a divisoria da linha da tabela-->
+            <thead>
+                <tr>
+                    <th>Nome das atividades</th>
+                    <th>Notas</th>
+                    <th>Aprovado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--rodapé não precisamos mas desse codico, foi para o comeco para ter uma ideia de como ficaria
+                    <tr>
+                    <td>Atividade 1</td>
+                    <td>7</td>
+                    <td><img src="./images/aprovado.png" alt="emoji festejando"></td>
+                </tr>-->
+            </tbody>
+            
+        <!--rodapé-->
+        <tfoot>
+            <tbody>
+                <tr>
+                   <td>Média final</td>
+                    <td id="media-final-valor">---</td>
+                    <td id="media-final-resultado"><span class="resultado Reprovado">---</span></td>
+                </tr>
+            </tbody>
+        </tfoot>
+    </div>
+
+    <!--JavaScript-->
+    <script src="script.js">
+    </script>
+</body>
+</html>
